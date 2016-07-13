@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>question</key>
+		<string>Mike&apos;s car broke and he used $315 from his savings to have it repaired. After that, he had $588 left in savings. How much money did Mike have saved before his car broke?</string>
+		<key>answer</key>
+		<string>903</string>
+		<key>options</key>
+		<array>
+			<string>900</string>
+			<string>903</string>
+			<string>273</string>
+			<string>803</string>
+		</array>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>A dust storm sweeps across the prairie. It covers 385 acres of the prairie in dust, but leaves 140 acres untouched. How many acres does the prairie cover?</string>
+		<key>answer</key>
+		<string>525</string>
+		<key>credit</key>
+		<integer>2</integer>
+		<key>options</key>
+		<array>
+			<string>425</string>
+			<string>515</string>
+			<string>585</string>
+			<string>525</string>
+		</array>
+	</dict>
+</array>
+</plist>
