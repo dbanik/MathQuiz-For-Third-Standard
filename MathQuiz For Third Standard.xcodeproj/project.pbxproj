@@ -15,6 +15,16 @@
 		B6ADB9741D356F5700B24C92 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6ADB9721D356F5700B24C92 /* LaunchScreen.storyboard */; };
 		B6ADB97C1D357AC600B24C92 /* Problem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ADB97B1D357AC600B24C92 /* Problem.swift */; };
 		B6ADB9811D357EE500B24C92 /* Addition.plist in Resources */ = {isa = PBXBuildFile; fileRef = B6ADB9801D357EE500B24C92 /* Addition.plist */; };
+		B6ADB9841D3821D500B24C92 /* UIVerticalAlignLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ADB9831D3821D500B24C92 /* UIVerticalAlignLabel.swift */; };
+		B6ADB9861D39625800B24C92 /* Numbers.plist in Resources */ = {isa = PBXBuildFile; fileRef = B6ADB9851D39625800B24C92 /* Numbers.plist */; };
+		B6ADB9881D3B320100B24C92 /* Subtraction.plist in Resources */ = {isa = PBXBuildFile; fileRef = B6ADB9871D3B320100B24C92 /* Subtraction.plist */; };
+		B6ADB98A1D3B395C00B24C92 /* Multiplication.plist in Resources */ = {isa = PBXBuildFile; fileRef = B6ADB9891D3B395C00B24C92 /* Multiplication.plist */; };
+		B6ADB98C1D3B39A500B24C92 /* Division.plist in Resources */ = {isa = PBXBuildFile; fileRef = B6ADB98B1D3B39A500B24C92 /* Division.plist */; };
+		B6ADB98E1D3D4ABF00B24C92 /* Mixed.plist in Resources */ = {isa = PBXBuildFile; fileRef = B6ADB98D1D3D4ABF00B24C92 /* Mixed.plist */; };
+		B6ADB9901D3D50A000B24C92 /* Logical Reasoning.plist in Resources */ = {isa = PBXBuildFile; fileRef = B6ADB98F1D3D50A000B24C92 /* Logical Reasoning.plist */; };
+		B6ADB9921D3D8AA900B24C92 /* Money.plist in Resources */ = {isa = PBXBuildFile; fileRef = B6ADB9911D3D8AA900B24C92 /* Money.plist */; };
+		B6ADB9941D3D8AE100B24C92 /* Time.plist in Resources */ = {isa = PBXBuildFile; fileRef = B6ADB9931D3D8AE100B24C92 /* Time.plist */; };
+		B6ADB9961D3EA3AB00B24C92 /* Geometry.plist in Resources */ = {isa = PBXBuildFile; fileRef = B6ADB9951D3EA3AB00B24C92 /* Geometry.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +38,16 @@
 		B6ADB9751D356F5700B24C92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6ADB97B1D357AC600B24C92 /* Problem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem.swift; sourceTree = "<group>"; };
 		B6ADB9801D357EE500B24C92 /* Addition.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Addition.plist; sourceTree = "<group>"; };
+		B6ADB9831D3821D500B24C92 /* UIVerticalAlignLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIVerticalAlignLabel.swift; sourceTree = "<group>"; };
+		B6ADB9851D39625800B24C92 /* Numbers.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Numbers.plist; sourceTree = "<group>"; };
+		B6ADB9871D3B320100B24C92 /* Subtraction.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Subtraction.plist; sourceTree = "<group>"; };
+		B6ADB9891D3B395C00B24C92 /* Multiplication.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Multiplication.plist; sourceTree = "<group>"; };
+		B6ADB98B1D3B39A500B24C92 /* Division.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Division.plist; sourceTree = "<group>"; };
+		B6ADB98D1D3D4ABF00B24C92 /* Mixed.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Mixed.plist; sourceTree = "<group>"; };
+		B6ADB98F1D3D50A000B24C92 /* Logical Reasoning.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Logical Reasoning.plist"; sourceTree = "<group>"; };
+		B6ADB9911D3D8AA900B24C92 /* Money.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Money.plist; sourceTree = "<group>"; };
+		B6ADB9931D3D8AE100B24C92 /* Time.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Time.plist; sourceTree = "<group>"; };
+		B6ADB9951D3EA3AB00B24C92 /* Geometry.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Geometry.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				B6ADB96D1D356F5700B24C92 /* Main.storyboard */,
+				B6ADB9831D3821D500B24C92 /* UIVerticalAlignLabel.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -101,6 +122,15 @@
 			isa = PBXGroup;
 			children = (
 				B6ADB9801D357EE500B24C92 /* Addition.plist */,
+				B6ADB9851D39625800B24C92 /* Numbers.plist */,
+				B6ADB9871D3B320100B24C92 /* Subtraction.plist */,
+				B6ADB9891D3B395C00B24C92 /* Multiplication.plist */,
+				B6ADB98B1D3B39A500B24C92 /* Division.plist */,
+				B6ADB98D1D3D4ABF00B24C92 /* Mixed.plist */,
+				B6ADB98F1D3D50A000B24C92 /* Logical Reasoning.plist */,
+				B6ADB9911D3D8AA900B24C92 /* Money.plist */,
+				B6ADB9931D3D8AE100B24C92 /* Time.plist */,
+				B6ADB9951D3EA3AB00B24C92 /* Geometry.plist */,
 			);
 			name = DB;
 			sourceTree = "<group>";
@@ -163,10 +193,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6ADB98E1D3D4ABF00B24C92 /* Mixed.plist in Resources */,
+				B6ADB9961D3EA3AB00B24C92 /* Geometry.plist in Resources */,
 				B6ADB9811D357EE500B24C92 /* Addition.plist in Resources */,
+				B6ADB9881D3B320100B24C92 /* Subtraction.plist in Resources */,
 				B6ADB9741D356F5700B24C92 /* LaunchScreen.storyboard in Resources */,
+				B6ADB9861D39625800B24C92 /* Numbers.plist in Resources */,
 				B6ADB9711D356F5700B24C92 /* Assets.xcassets in Resources */,
+				B6ADB98C1D3B39A500B24C92 /* Division.plist in Resources */,
+				B6ADB98A1D3B395C00B24C92 /* Multiplication.plist in Resources */,
 				B6ADB96F1D356F5700B24C92 /* Main.storyboard in Resources */,
+				B6ADB9921D3D8AA900B24C92 /* Money.plist in Resources */,
+				B6ADB9901D3D50A000B24C92 /* Logical Reasoning.plist in Resources */,
+				B6ADB9941D3D8AE100B24C92 /* Time.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6ADB9841D3821D500B24C92 /* UIVerticalAlignLabel.swift in Sources */,
 				B6ADB96C1D356F5700B24C92 /* DetailViewController.swift in Sources */,
 				B6ADB97C1D357AC600B24C92 /* Problem.swift in Sources */,
 				B6ADB96A1D356F5700B24C92 /* MasterViewController.swift in Sources */,

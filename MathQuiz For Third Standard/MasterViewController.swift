@@ -16,13 +16,22 @@ class MasterViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
         if let split = self.splitViewController {
             let controllers = split.viewControllers
             self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
         }
         
-        self.chapterList = ["Numbers", "Addition", "Subtraction", "Multiplication", "Division", "Mixed", "Patterns", "Money", "Time", "Geometry"]
+        let frame = CGRect.init(x: 0, y: 0, width: self.view.frame.width, height: 44.0)
+        let titleLabel = UILabel.init(frame: frame)
+        titleLabel.backgroundColor = UIColor.clearColor()
+        titleLabel.font = UIFont.init(name: "Chalkduster", size: 24.0)
+        titleLabel.textAlignment = .Center
+        titleLabel.textColor = UIColor.blackColor()
+        titleLabel.text = "Chapters"
+        self.navigationItem.titleView = titleLabel
+        
+        self.chapterList = ["Numbers", "Addition", "Subtraction", "Multiplication", "Division", "Mixed", "Logical Reasoning", "Money", "Time", "Geometry"]
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -40,10 +49,11 @@ class MasterViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showDetail" {
             if let indexPath = self.tableView.indexPathForSelectedRow {
-                let controller = (segue.destinationViewController as! UINavigationController).topViewController as! DetailViewController
-                controller.detailItem = self.chapterList[indexPath.row]
-                controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
-                controller.navigationItem.leftItemsSupplementBackButton = true
+                let chapterController = (segue.destinationViewController as! UINavigationController).topViewController as! DetailViewController
+                chapterController.detailItem = self.chapterList[indexPath.row]
+                chapterController.navigationItem.title = self.chapterList[indexPath.row]
+                chapterController.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
+                chapterController.navigationItem.leftItemsSupplementBackButton = true
             }
         }
     }

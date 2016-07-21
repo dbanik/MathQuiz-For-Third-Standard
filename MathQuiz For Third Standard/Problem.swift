@@ -9,8 +9,9 @@
 import Foundation
 
 class Problem: NSObject {
-    var question: NSString?
-    var answer: NSString?
+    var question: String!
+    var answer: String!
     var credit: NSInteger?
     var options: NSMutableArray?
+    var selectedOption: String?
 }
