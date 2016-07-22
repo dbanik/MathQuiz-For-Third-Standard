@@ -9,7 +9,7 @@
 import UIKit
 
 class DetailViewController: UIViewController {
-
+    
     // MARK: Outlets
     @IBOutlet weak var questionHeader: UILabel!
     @IBOutlet weak var questionLabel: UIVerticalAlignLabel!
@@ -29,13 +29,8 @@ class DetailViewController: UIViewController {
     var currentIndex: NSInteger = 0
     var currentProblem: Problem!
     var currentScore: NSInteger = 0
-
-    var detailItem: String? {
-        didSet {
-            self.questionList = self.fetchQuestionList(detailItem!)
-            self.currentIndex = 0
-        }
-    }
+    
+    var detailItem: String = "Numbers"
     
     var questionNumber: NSInteger {
         return self.currentIndex + 1
@@ -71,7 +66,7 @@ class DetailViewController: UIViewController {
         
         return qList
     }
-
+    
     // MARK: Refresh
     func refreshView() {
         if self.questionList.count > 0 {
@@ -140,10 +135,42 @@ class DetailViewController: UIViewController {
             }
         }
     }
-
+    
     // MARK: View Loading
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.questionList = self.fetchQuestionList(self.detailItem)
+        self.currentIndex = 0
+        self.navigationItem.title = self.detailItem
+        
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(DetailViewController.respondToSwipeGesture(_:)))
+        swipeRight.direction = UISwipeGestureRecognizerDirection.Right
+        self.view.addGestureRecognizer(swipeRight)
+        
+        let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(DetailViewController.respondToSwipeGesture(_:)))
+        swipeDown.direction = UISwipeGestureRecognizerDirection.Left
+        self.view.addGestureRecognizer(swipeDown)
+    }
+    
+    func respondToSwipeGesture(gesture: UIGestureRecognizer) {
+        
+        if let swipeGesture = gesture as? UISwipeGestureRecognizer {
+            
+            switch swipeGesture.direction {
+            case UISwipeGestureRecognizerDirection.Right:
+                if self.previousButton.hidden == false {
+                    self.goToPrevious(self)
+                }
+                break
+            case UISwipeGestureRecognizerDirection.Left:
+                if self.nextButton.hidden == false {
+                    self.goToNext(self)
+                }
+                break
+            default:
+                break
+            }
+        }
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -151,18 +178,18 @@ class DetailViewController: UIViewController {
         self.score.text = self.scoreStr
         self.refreshView()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
+    
     // MARK: Actions
     @IBAction func goToNext(sender: AnyObject) {
         self.currentIndex = self.currentIndex + 1
         self.refreshView()
         self.restoreSelection()
     }
-
+    
     @IBAction func goToPrevious(sender: AnyObject) {
         self.currentIndex = self.currentIndex - 1
         self.refreshView()
@@ -171,9 +198,9 @@ class DetailViewController: UIViewController {
     
     @IBAction func answerAction(sender: UIButton) {
         if self.topLeftButton.titleColorForState(.Normal) != self.darkGreenColor &&
-        self.topRightButton.titleColorForState(.Normal) != self.darkGreenColor &&
-        self.bottomLeftButton.titleColorForState(.Normal) != self.darkGreenColor &&
-        self.bottomRightButton.titleColorForState(.Normal) != self.darkGreenColor {
+            self.topRightButton.titleColorForState(.Normal) != self.darkGreenColor &&
+            self.bottomLeftButton.titleColorForState(.Normal) != self.darkGreenColor &&
+            self.bottomRightButton.titleColorForState(.Normal) != self.darkGreenColor {
             self.handleAnswerAction(sender)
         } else {
             self.comments.text = "Haha, good try !!"
